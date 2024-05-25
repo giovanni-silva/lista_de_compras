@@ -1,6 +1,7 @@
 {
     "name": "Lista de Compras PWA",
     "short_name": "Lista de Compras",
+    "scope": "/lista_de_compras/",
     "start_url": "/lista_de_compras/",
     "display": "standalone",
     "background_color": "#ffffff",
