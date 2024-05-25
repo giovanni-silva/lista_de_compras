@@ -1,7 +1,7 @@
 const CACHE_NAME = 'shopping-list-cache-v1';
 const urlsToCache = [
     '/',
-    '/lista_compras.html',
+    '/index.html',
     '/styles.css',
     '/script.js',
     '/manifest.json',
