@@ -1,7 +1,7 @@
 {
     "name": "Lista de Compras PWA",
     "short_name": "Lista de Compras",
-    "start_url": "/",
+    "start_url": "/lista_de_compras/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#4caf50",
