@@ -12,6 +12,7 @@ form {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 input[type="text"] {
@@ -19,6 +20,8 @@ input[type="text"] {
     font-size: 16px;
     flex: 1;
     margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 200px;
 }
 
 button {
@@ -38,8 +41,40 @@ li {
     border: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .completed {
     text-decoration: line-through;
+}
+
+button {
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"] {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li button {
+        margin-top: 10px;
+        width: 100%;
+    }
 }
