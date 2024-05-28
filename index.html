@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Compras PWA</title>
-    <link rel="stylesheet" href="/lista_de_compras/styles.css">
-    <link rel="manifest" href="/lista_de_compras/manifest.json">
-    <link rel="icon" href="/lista_de_compras/favicon.png"> <!-- Link para o favicon -->
+    <link rel="stylesheet" href="styles.css"> <!-- Importando o arquivo de estilos CSS -->
+    <link rel="manifest" href="/lista_de_compras/manifest.json"> <!-- Importando o arquivo manifest JSON -->
+    <link rel="icon" type="image/png" href="/lista_de_compras/favicon.png">
 </head>
 <body>
-    <div class="container">
-        <h1>Lista de Compras</h1>
-        <form id="addItemForm" onsubmit="addItem(); return false;">
-            <input type="text" id="itemInput" placeholder="Adicione um item">
-            <button type="submit">Adicionar</button>
+    <div class="container"> <!-- Container centralizado -->
+        <h1>Lista de Compras</h1> <!-- Título da página -->
+        <form> <!-- Formulário para adicionar itens -->
+            <input type="text" id="itemInput" placeholder="Digite um item"> <!-- Campo de entrada de texto para adicionar itens -->
+            <button type="button" onclick="addItem()">Adicionar</button> <!-- Botão para adicionar itens -->
         </form>
-        <ul id="itemList"></ul>
+        <ul id="itemList"></ul> <!-- Lista de itens -->
     </div>
-    <script src="/lista_de_compras/script.js"></script>
+
+    <script src="script.js"></script> <!-- Importando o arquivo de script JavaScript -->
 </body>
 </html>
