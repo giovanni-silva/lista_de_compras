@@ -1,9 +1,11 @@
-const CACHE_NAME = 'lista_de_compras-v1';
+const CACHE_NAME = 'lista_de_compras-v1'; // Nome do cache
 
+// Evento de instalação do Service Worker
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
+                // Adiciona os recursos ao cache durante a instalação
                 return cache.addAll([
                     '/lista_de_compras/', // Raiz do PWA
                     '/lista_de_compras/index.html',
@@ -16,11 +18,12 @@ self.addEventListener('install', event => {
                 ]);
             })
             .catch(error => {
-                console.error('Erro ao adicionar recursos ao cache:', error);
+                console.error('Erro ao adicionar recursos ao cache:', error); // Log de erro, caso ocorra algum problema ao adicionar recursos ao cache
             })
     );
 });
 
+// Evento de fetch para interceptar requisições de rede
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
@@ -30,7 +33,7 @@ self.addEventListener('fetch', event => {
                     return response;
                 }
 
-                // Se a resposta não estiver em cache, faz uma requisição de rede
+                // Se a resposta não estiver em cache, faz uma requisição de rede e armazena no cache para uso futuro
                 return fetch(event.request)
                     .then(response => {
                         // Abre o cache e armazena a nova resposta
@@ -44,14 +47,14 @@ self.addEventListener('fetch', event => {
     );
 });
 
-// Atualiza o cache quando uma nova versão do Service Worker estiver disponível
+// Evento de ativação para limpar caches antigos
 self.addEventListener('activate', event => {
     event.waitUntil(
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames.map(cacheName => {
                     if (cacheName !== CACHE_NAME) {
-                        return caches.delete(cacheName);
+                        return caches.delete(cacheName); // Deleta caches antigos, exceto o cache atual
                     }
                 })
             );
