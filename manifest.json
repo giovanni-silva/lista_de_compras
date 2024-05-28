@@ -1,12 +1,12 @@
 {
-    "name": "Lista de Compras PWA", // Nome do aplicativo PWA
-    "short_name": "Lista de Compras", // Nome curto do aplicativo
-    "scope": "/lista_de_compras/", // Escopo do PWA
-    "start_url": "/lista_de_compras/", // URL inicial do PWA
-    "display": "standalone", // Modo de exibição independente
-    "background_color": "#ffffff", // Cor de fundo
-    "theme_color": "#007bff", // Cor do tema (azul)
-    "icons": [ // Ícones para várias plataformas
+    "name": "Lista de Compras PWA", 
+    "short_name": "Lista de Compras", 
+    "scope": "/lista_de_compras/", 
+    "start_url": "/lista_de_compras/", 
+    "display": "standalone", 
+    "background_color": "#ffffff", 
+    "theme_color": "#007bff", 
+    "icons": [ 
         {
             "src": "carrinho_celular.png",
             "sizes": "192x192",
