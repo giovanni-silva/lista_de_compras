@@ -6,15 +6,17 @@
     <title>Lista de Compras PWA</title>
     <link rel="stylesheet" href="/lista_de_compras/styles.css">
     <link rel="manifest" href="/lista_de_compras/manifest.json">
+    <link rel="icon" href="/lista_de_compras/favicon.png"> <!-- Link para o favicon -->
 </head>
 <body>
-    <h1>Lista de Compras</h1>
-    <form onsubmit="addItem(); return false;">
-        <input type="text" id="itemInput" placeholder="Adicione um item">
-        <button type="submit">Adicionar</button>
-    </form>
-    <ul id="itemList"></ul>
-
+    <div class="container">
+        <h1>Lista de Compras</h1>
+        <form id="addItemForm" onsubmit="addItem(); return false;">
+            <input type="text" id="itemInput" placeholder="Adicione um item">
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul id="itemList"></ul>
+    </div>
     <script src="/lista_de_compras/script.js"></script>
 </body>
 </html>
