@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lista_de_compras-v2';
+const CACHE_NAME = 'lista_de_compras-v3';
 const urlsToCache = [
     '/lista_de_compras/',
     '/lista_de_compras/index.html',
@@ -24,7 +24,7 @@ self.addEventListener('activate', event => {
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames.map(cacheName => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
+                    if (!cacheWhitelist.includes(cacheName)) {
                         return caches.delete(cacheName);
                     }
                 })
