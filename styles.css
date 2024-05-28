@@ -1,80 +1,70 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
 h1 {
+    background-color: #4caf50;
+    color: white;
+    padding: 1rem;
     text-align: center;
+    margin: 0;
 }
 
 form {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    margin: 1rem;
 }
 
 input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    flex: 1;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    min-width: 200px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    width: calc(100% - 110px);
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 li {
-    padding: 10px;
-    background: #f4f4f4;
-    margin-bottom: 5px;
-    border: 1px solid #ddd;
+    background-color: white;
+    padding: 0.5rem;
+    margin: 0.5rem;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.completed {
+li.completed {
     text-decoration: line-through;
+    color: gray;
 }
 
 button {
-    margin-left: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    form {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    input[type="text"] {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 100%;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    li button {
-        margin-top: 10px;
-        width: 100%;
-    }
+button:hover {
+    background-color: #e53935;
 }
