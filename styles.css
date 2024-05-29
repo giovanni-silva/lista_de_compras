@@ -17,6 +17,7 @@ body {
     max-width: 400px;
     width: 100%;
     text-align: center;
+    outline: 1px solid black;
 }
 
 h1 {
